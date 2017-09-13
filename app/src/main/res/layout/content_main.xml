@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="letsrealize.com.woundmastersinc.MainActivity"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:showIn="@layout/app_bar_main">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_padding"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/edittext_bottom_padding"-->
+                <!--android:layout_weight="0.01"-->
+                <!--android:background="@drawable/edit_text_design"-->
+                <!--android:drawablePadding="@dimen/icon_text_margin"-->
+                <!--android:ems="10"-->
+                <!--android:fontFamily="sans-serif-condensed"-->
+                <!--android:hint="@string/select_service"-->
+                <!--android:textSize="18sp"-->
+                <!--android:paddingBottom="@dimen/button_padding"-->
+                <!--android:paddingLeft="@dimen/button_padding"-->
+                <!--android:paddingRight="@dimen/button_padding"-->
+                <!--android:paddingTop="@dimen/button_padding" />-->
+                <Spinner
+                    android:id="@+id/planets_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:ems="10"
+                    android:fontFamily="sans-serif-condensed"
+                    android:hint="@string/time_requested"
+                    android:inputType="time"
+                    android:paddingBottom="@dimen/button_padding"
+                    android:paddingLeft="@dimen/button_padding"
+                    android:paddingRight="@dimen/button_padding"
+                    android:paddingTop="@dimen/button_padding"
+                    android:background="@drawable/edit_text_design"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/edittext_bottom_padding"
+                android:layout_weight="0.01"
+                android:background="@drawable/edit_text_design"
+                android:drawablePadding="@dimen/icon_text_margin"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="@dimen/button_padding"
+                android:paddingLeft="@dimen/button_padding"
+                android:paddingRight="@dimen/button_padding"
+                android:paddingTop="@dimen/button_padding"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/email_confirma"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="@dimen/edittext_bottom_padding"
+                android:layout_weight="0.23"
+                android:background="@drawable/edit_text_design"
+                android:drawablePadding="@dimen/icon_text_margin"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="top|left"
+                android:hint="@string/request_further_info"
+                android:inputType="textMultiLine"
+                android:paddingBottom="@dimen/button_padding"
+                android:paddingLeft="@dimen/button_padding"
+                android:paddingRight="@dimen/button_padding"
+                android:paddingTop="@dimen/button_padding"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/email_sign_in_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_margin"
+                android:background="@color/secondaryColor"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/send_request"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
